@@ -1,0 +1,470 @@
+/* POCETNA SIRINA EKRANA: 320px */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+ background-color: #C4C4C4;
+    font-size: 1.3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* .cont {
+    margin: 0 auto;
+    width: 50vw;
+} */
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#HeaderCont {
+    background-color: #504141;
+    padding: 1.6vh 1.2vw;
+    color: #C4C4C4;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#HeaderWeatherApp {
+    color: #C4C4C4;
+    text-decoration: none;
+    margin-left: 2vw;
+    font-size: 1.4em;
+}
+
+/* HAMBURGER MENI */
+
+#HamburgerMeni {
+    background-color: #C4C4C4;
+    height: 6vh;
+    width: 15vw;
+    border: 1px solid #C4C4C4;
+    border-radius: 8px;
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.HamburgerDeo {
+    background-color: aliceblue;
+    height: 0.8vh;
+    width: 10vw;
+    display: block;
+    margin: 0.3vh auto;
+}
+
+#HamburgerMeni.active .HamburgerDeo:nth-child(2) {
+    opacity: 0;
+}
+
+#HamburgerMeni.active .HamburgerDeo:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#HamburgerMeni.active .HamburgerDeo:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+#HeaderLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vw;
+    align-items: center;
+
+    position: fixed;
+    left: -100%; /* skrivanje sa ekrana */
+    top: 9vh;
+    width: 100%;
+    text-align: center;
+    transition-duration: 0.3s;
+    background-color: #504141;
+}
+
+#HeaderLinks a {
+    color: #C4C4C4;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 2vh 0;
+    width: 27vh;
+}
+
+#HeaderLinks.active {
+    left: 0; /* otkrivanje/prikazivanje na ekranu, kada je dugme aktivno */
+}
+
+/* CITAT */
+
+#SecCitat {
+    background-color: #C4C4C4;
+    color: #873032;
+}
+
+#CitatCont {
+    text-align: center;
+    padding: 5vh 0;
+    font-size: 1.3em;
+}
+
+#CitatTekst {
+    font-weight: 300;
+}
+
+/* MAIN - UNOS GRADA */
+
+main {
+    padding: 4vh 0;
+    background-color: #C4C4C4;
+}
+
+#UnosGradaDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 0;
+    gap: 2vh;
+    position: relative;
+}
+
+#LabelaUnosGrada {
+    font-size: 1.7em;
+    color: #873032;
+}
+
+#InputUnosGrada {
+    padding: 0.7vh 4vw;
+    height: 6.5vh;
+    width: 86vw;
+    outline: none;
+    border: 1px solid #C4C4C4;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #504141;
+}
+
+#DivOdgovor {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+#DivOdgovor p {
+    font-size: 1.9em;
+    color: #873032;
+    font-weight: 600;
+}
+
+.search-icon {
+    position: absolute;
+    top: 12.4vh;
+    right: 10vw;
+    color: #999898;
+    pointer-events: none;
+}
+
+#InputUnosGrada::placeholder {
+    color: #999898;
+}
+
+/* UNESENI GRADOVI */
+
+#SecUneseniGradovi {
+    padding: 8vh 5vw;
+    background-color: #C4C4C4;
+}
+
+#UneseniGradoviNaslov {
+    font-size: 1.4em;
+    margin-bottom: 1.6vh;
+    color: #873032;
+    font-weight: 100;
+}
+
+#Tabela {
+    border: 1px solid #504141;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    padding: 50vh 0;
+    /* table-layout: fixed; ----- da celije budu iste sirine */
+}
+
+#Tabela th, #Tabela td {
+    border: 1px solid #504141;
+    padding: 2vh 2vw;
+    text-align: center;
+    vertical-align: middle;
+    color: #504141;
+    text-shadow: 
+    -1px -1px 2 #292828,
+     1px -1px 2 #292828,
+    -1px  1px 2 #292828,
+     1px  1px 2 #292828;
+     font-weight: normal;
+}
+
+#Tabela th {
+    border: 2px solid #504141;
+}
+
+#DeleteTh {
+    cursor: pointer;
+}
+
+.DeleteJedanGrad {
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #504141;
+    padding: 3vh;
+}
+
+#FooterCont {
+    display: flex;
+    justify-content: center;
+}
+
+#FooterLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#FooterLinks a {
+    text-decoration: none;
+    color: #C4C4C4;
+}
+
+#FuterTekst {
+    margin-top: 5vh;
+    font-size: 0.7em;
+    text-align: center;
+    color: rgba(196, 196, 196, 0.6);
+    font-weight: 100;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 375px) {
+#HamburgerMeni {
+    height: 6.5vh;
+    width: 13vw;
+}
+}
+
+@media (min-width: 387px) {
+#CitatCont {
+    padding: 5vh 5vw;
+    font-size: 1.3em;
+}
+}
+
+@media (min-width: 450px) {
+#HamburgerMeni {
+    height: 7.5vh;
+    width: 12vw;
+}
+
+.HamburgerDeo {
+    height: 1vh;
+    margin: 0.5vh auto;
+}
+
+#HamburgerMeni.active .HamburgerDeo:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+#HamburgerMeni.active .HamburgerDeo:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+}
+
+@media (min-width: 550px) {
+#HamburgerMeni {
+    width: 10vw;
+}
+
+.HamburgerDeo {
+    width: 7.5vw;
+}
+
+#CitatCont {
+    padding: 5vh 12vw;
+}
+}
+
+@media (min-width: 732px) {
+#HamburgerMeni {
+    width: 8vw;
+}
+
+.HamburgerDeo {
+    height: 0.9vh;
+    width: 6vw;
+}
+
+#CitatCont {
+    padding: 5vh 22vw;
+}
+}
+
+@media (min-width: 1000px) {
+#HeaderCont {
+    display: flex;
+    justify-content: start;
+    gap: 15vw;
+}
+
+#HeaderWeatherApp {
+    margin-left: 2vw;
+    font-size: 1.4em;
+}
+
+#HamburgerMeni {
+    display: none;
+}
+
+#HeaderLinks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: center;
+    
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    text-align: center;
+    transition-duration: 0;
+}
+
+#HeaderLinks a {
+    color: #C4C4C4;
+    text-decoration: none;
+    font-size: 1em;
+
+    margin: 0vh 0;
+    width: auto;
+}
+
+#InputUnosGrada {
+    padding: 0.7vh 2vw;
+    width: 50vw;
+}
+
+.search-icon {
+    top: 12.4vh;
+    right: 27vw;
+}
+
+#Tabela {
+    table-layout: fixed;
+
+}
+}
+
+@media (min-width: 1165px) {
+#HeaderCont {
+    gap: 18vw;
+}
+
+#Tabela {
+    width: 85%;
+}
+
+#UneseniGradoviNaslov {
+    text-align: center;
+}
+
+}
+
+@media (min-width: 1245px) {
+#HeaderCont {
+    gap: 20vw;
+}
+
+#CitatCont {
+    padding: 5vh 30vw;
+}
+
+#Tabela {
+    width: 75%;
+}
+}
+
+@media (min-width: 1390px) {
+#HeaderCont {
+    gap: 23vw;
+}
+
+#CitatCont {
+    margin-top: 2vh;
+    padding: 5vh 35vw;
+    font-size: 1.7em;
+}
+
+#Tabela {
+    width: 65%;
+}
+}
+
+@media (min-width: 1570px) {
+    #HeaderCont {
+    gap: 25vw;
+}
+
+#InputUnosGrada {
+    width: 38vw;
+    height: 8.5vh;
+}
+
+.search-icon {
+    top: 13.5vh;
+    right: 32vw;
+}
+
+#Tabela {
+    width: 55%;
+}
+}
+
+@media (min-width: 1750px) {
+    #HeaderCont {
+    gap: 27vw;
+}
+}
+
+@media (min-width: 1860px) {
+    #HeaderCont {
+    gap: 28vw;
+}
+
+#InputUnosGrada {
+    width: 29vw;
+    height: 7vh;
+}
+
+.search-icon {
+    top: 11.3vh;
+    right: 36vw;
+}
+
+#DivOdgovor {
+    margin-top: 8vh;
+}
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome za ikonicu lupe -->
+</head>
+
+<body>
+    <header>
+        <div id="HeaderCont" class="cont">
+            <a href="#" id="HeaderWeatherApp"><p>Weather App</p></a>
+
+            <div id="HeaderLinks">
+                <a href="#" class="HeaderLink">Contact</a>
+                <a href="#" class="HeaderLink">About us</a>
+                <a href="#SecUneseniGradovi" class="HeaderLink">Entered cities</a>
+                <a href="#" class="HeaderLink">New stuff!</a>
+            </div>
+
+            <div id="HamburgerMeni">
+                <span class="HamburgerDeo"></span>
+                <span class="HamburgerDeo"></span>
+                <span class="HamburgerDeo"></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="SecCitat">
+        <div id="CitatCont" class="cont">
+            <h2 id="CitatTekst">„The sun always shines above the clouds.“</h2>
+        </div>
+    </section>
+
+    <main>
+        <div class="cont">
+        <div id="UnosGradaDiv">
+            <label for="InputUnosGrada" id="LabelaUnosGrada">Your City:</label>
+            <input type="text" id="InputUnosGrada" placeholder="Search"><i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+        <div id="DivOdgovor">
+            <p id="Odgovor"></p>
+        </div>
+        <!-- div ima paragraf ili tabelu u zavisnosti od odgovora -->
+    </div>
+    </main>
+
+    <section id="SecUneseniGradovi">
+        <div class="cont">
+        <h3 id="UneseniGradoviNaslov">Entered cities:</h3>
+        <table id="Tabela">
+            <tr id="trNaslov">
+                <th>City</th>
+                <th>Time</th>
+                <th id="DeleteTh">Delete</th>
+            </tr>
+            <!-- <tr>
+                <td>Barcelona</td>
+                <td>24C 11:00</td>
+                <td>Delete</td>
+            </tr>
+            <tr>
+                <td>Madrid</td>
+                <td>25C 11:00</td>
+                <td>Delete</td>
+            </tr>
+            <tr>
+                <td>Paris</td>
+                <td>27C 10:00</td>
+                <td>Delete</td>
+            </tr> -->
+        </table>
+
+        </div>
+    </section>
+
+    <footer>
+        <div id="FooterCont" class="cont">
+        <div id="FooterLinks">
+            <a href="#">Contact</a>
+            <a href="#">About us</a>
+            <a href="#">FAQ</a>
+            <a href="https://github.com/devdimitrijes?tab=repositories" target="_blank">Other Apps</a>
+        </div>
+
+        </div>
+
+        <p id="FuterTekst">Dimitrije Stamenković|©|2025</p>
+
+    </footer>
+
+    <script src="JavaScript.js"></script>
+</body>
+
+</html>
