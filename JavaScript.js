@@ -74,26 +74,9 @@ InputUnetGrad.addEventListener("keydown", function(e) {
 
 function display() {
     //Kreiranje novog reda u tabeli
-    for (let i = 1; i <= localStorage.length; i++) { //delimo sa 3 jer nam treba ID = 1, a imamo 3 elementa u lStorage: ID, Ime, Vreme
+    for (let i = 1; i <= localStorage.length; i++) {
         if (localStorage.getItem('Id_grada' + i) !== null) {
-        let novTr = document.createElement('tr');
-        Tabela.appendChild(novTr);
-        let imeGrada = document.createElement('td');
-        novTr.append(imeGrada);
-        imeGrada.textContent = localStorage.getItem('Ime_grada' + i);
-        let Vreme = document.createElement('td');
-        novTr.append(Vreme);
-        Vreme.textContent = localStorage.getItem('Vreme_grada' + i);
-        let Delete = document.createElement('td');
-        novTr.append(Delete);
-        Delete.classList.add("DeleteJedanGrad");
-        Delete.textContent = "Delete";
-        Delete.addEventListener("click", function() {
-        this.parentElement.remove();
-        localStorage.removeItem('Ime_grada' + i);
-        localStorage.removeItem('Vreme_grada' + i);
-        localStorage.removeItem('Id_grada' + i);
-    })
+        displayTrenutniGrad(localStorage.getItem('Id_grada' + i));
         }
     }
 }
@@ -118,11 +101,5 @@ function displayTrenutniGrad(ID) {
         this.parentElement.remove();
     })
 }
-
-// Array.from(document.getElementsByClassName("DeleteJedanGrad")).forEach(dugme => { //Array.from() - pretvara u niz!!!!!
-//         dugme.addEventListener("click", function() {
-//         this.parentElement.remove();
-//     });
-// });
 
 display();
